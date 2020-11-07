@@ -17,46 +17,10 @@ import  Formulario  from "./componets/Formulario";
 import { useAlert } from 'react-alert';
 import { withAlert } from 'react-alert'
 
-// function App() {
+function App() {
 
-//   return (
-
-//     <BrowserRouter>
-//       <div className="Container m-5 pb-5">
-//         {/* <Button variant="contained" color="primary" disableElevation>
-//           Iniciar Sesion
-//         </Button> */}
-
-//         {/* <h3 className="m-3 d-flex justify-content-center">
-//           Reac JS con Web api
-//         </h3>
-//         <h5 className="m-3 d-flex justify-content-center">
-//           Portal de gestión de empleados
-//         </h5> */}
-
-//         {/* <Navigation></Navigation> */}
-
-//         <Switch>
-//           {/* <Route path="/Login" component={Login} exact /> */}
-//           <Route path="/" component={SignIn2} exact />
-//           {/* <Route path="/" component={Home} exact /> */}
-//           <Route path="/Home" component={Home} exact />
-//           <Route path="/department" component={Department} exact />
-//           <Route path="/Employee" component={Employee} exact />
-//           <Route path="/SignIn2" component={SignIn2} exact />
-//         </Switch>
-
-//         {/* <Button>Guardar</Button> */}
-//       </div>
-//     </BrowserRouter>
-//   );
-// }
-
-
-const App = () => {
-  //const alert = useAlert()
- 
   return (
+
     <BrowserRouter>
       <div className="Container m-5 pb-5">
         {/* <Button variant="contained" color="primary" disableElevation>
@@ -79,17 +43,53 @@ const App = () => {
           <Route path="/Home" component={Home} exact />
           <Route path="/department" component={Department} exact />
           <Route path="/Employee" component={Employee} exact />
-          <Route path="/Formulario" component={Formulario} exact />
           <Route path="/SignIn2" component={SignIn2} exact />
         </Switch>
 
         {/* <Button>Guardar</Button> */}
       </div>
-     </BrowserRouter>
-
-
-  )
+    </BrowserRouter>
+  );
 }
+
+
+// const App = () => {
+//   //const alert = useAlert()
+ 
+//   return (
+//     <BrowserRouter>
+//       <div className="Container m-5 pb-5">
+//         {/* <Button variant="contained" color="primary" disableElevation>
+//           Iniciar Sesion
+//         </Button> */}
+
+//         {/* <h3 className="m-3 d-flex justify-content-center">
+//           Reac JS con Web api
+//         </h3>
+//         <h5 className="m-3 d-flex justify-content-center">
+//           Portal de gestión de empleados
+//         </h5> */}
+
+//         {/* <Navigation></Navigation> */}
+
+//         <Switch>
+//           {/* <Route path="/Login" component={Login} exact /> */}
+//           <Route path="/" component={SignIn2} exact />
+//           {/* <Route path="/" component={Home} exact /> */}
+//           <Route path="/Home" component={Home} exact />
+//           <Route path="/department" component={Department} exact />
+//           <Route path="/Employee" component={Employee} exact />
+//           <Route path="/Formulario" component={Formulario} exact />
+//           <Route path="/SignIn2" component={SignIn2} exact />
+//         </Switch>
+
+//         {/* <Button>Guardar</Button> */}
+//       </div>
+//      </BrowserRouter>
+
+
+//   )
+// }
 
 
 export default  App;
