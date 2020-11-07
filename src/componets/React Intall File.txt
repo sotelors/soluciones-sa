@@ -1,0 +1,40 @@
+
+Combinando React.js y Redux.js
+
+Instalando react-redux
+La conexión de React con Redux no esta incluida directamente en Redux, 
+para esto necesitamos bajar react-redux, así que vamos a descargar lo necesario:
+
+npm i -S react react-dom react-redux redux
+
+Encapsulando la aplicación
+Lo primero que necesitamos es encapsular nuestra aplicación 
+con el componente Provider que trae react-redux. 
+Este componente recibe un único parámetro llamado store el cual es, como su nombre indica, la instancia del Store que usamos.
+
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import React from 'react';
+import store from './store';
+import App from './components/App';
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('app')
+);
+
+Este componente Provider define en el contexto global de React nuestra instancia del store.
+
+Accediendo al Store
+Una vez encapsulada nuestra aplicación de React nos toca definir que componentes van a acceder a nuestro Store, 
+ya que no todos lo van a necesitar.
+Para hacer eso necesitamos conectar nuestros componentes a Redux, esto se logra con un decorador que trae react-redux llamado connect.
+
+
+
+
+
+
+
+
