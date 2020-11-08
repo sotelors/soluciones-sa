@@ -29,6 +29,7 @@ import { useAlert } from 'react-alert'
 import swal from 'sweetalert';
 import { AccessAlarm, ThreeDRotation, LockOutlinedIcon } from '@material-ui/icons';
 import AccountCircle from '@material-ui/icons/AccountCircle';
+//import Box from '@material-ui/core/Box';
 
 
 
@@ -57,7 +58,8 @@ export class SignIn2 extends Component {
 
     //alert(event.target.DepartmentName.value);
 
-    fetch("http://localhost:22692/api/login/Login", {
+    //fetch("http://localhost:22692/api/login/Login", {
+    fetch("http://webapi-2.azurewebsites.net/Api/login/Login", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -149,6 +151,16 @@ export class SignIn2 extends Component {
           <div>
             
             {/* <Avatar>{ <AccountCircle color="primary" />}</Avatar> */}
+
+           
+            <Typography component="div">
+
+            {/* <Box fontStyle="italic" m={7}>
+              Sotelo Solutions
+            </Box> */}
+           
+            </Typography>
+
             
             
             <Typography component="h1" variant="h5">

@@ -16,6 +16,7 @@ import  Formulario  from "./componets/Formulario";
 //import { NavLink } from 'react-bootstrap';
 import { useAlert } from 'react-alert';
 import { withAlert } from 'react-alert'
+import Typography from "@material-ui/core/Typography";
 
 function App() {
 
@@ -27,12 +28,14 @@ function App() {
           Iniciar Sesion
         </Button> */}
 
-        <h3 className="m-3 d-flex justify-content-center">
+        
+
+        {/* <h3 className="m-3 d-flex justify-content-center">
           Reac JS con Web api
         </h3>
         <h5 className="m-3 d-flex justify-content-center">
           Portal de gestión de empleados
-        </h5>
+        </h5> */}
 
         {/* <Navigation></Navigation> */}
 
