@@ -31,17 +31,30 @@ import { AccessAlarm, ThreeDRotation, LockOutlinedIcon } from '@material-ui/icon
 import AccountCircle from '@material-ui/icons/AccountCircle';
 //import Box from '@material-ui/core/Box';
 
+import Input from '@material-ui/core/Input';
+import InputLabel from '@material-ui/core/InputLabel';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import FormControl from '@material-ui/core/FormControl';
 
 
+const useStyles = makeStyles((theme) => ({
+  margin: {
+    margin: theme.spacing(1),
+  },
+}));
 
 
 export class SignIn2 extends Component {
+  
   constructor(props) {
     super(props);
     //IconButton
     this.state = { snackbaropen: false, snackbarmsg: "" };
     this.handlerSubmit = this.handlerSubmit.bind(this);
+    
   }
+
+  
 
   fun() {
     this.props.history.push("/path");
@@ -59,7 +72,7 @@ export class SignIn2 extends Component {
     //alert(event.target.DepartmentName.value);
 
     //fetch("http://localhost:22692/api/login/Login", {
-    fetch("http://webapi-2.azurewebsites.net/Api/login/Login", {
+    fetch("https://webapi-2.azurewebsites.net/Api/login/Login", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -124,6 +137,7 @@ export class SignIn2 extends Component {
   }
 
   render() {
+    //const classes = useStyles();
     return (
       <div className="container">
         {/* SnackBar - alerta con Material UI*/}
@@ -168,7 +182,7 @@ export class SignIn2 extends Component {
             </Typography>
             <form onSubmit={this.handlerSubmit} noValidate>
               <TextField
-                variant="outlined"
+                //variant="outlined"
                 margin="normal"
                 required
                 fullWidth
@@ -179,7 +193,7 @@ export class SignIn2 extends Component {
                 autoFocus
               />
               <TextField
-                variant="outlined"
+                //variant="outlined"
                 margin="normal"
                 required
                 fullWidth
@@ -189,6 +203,32 @@ export class SignIn2 extends Component {
                 id="Password"
                 autoComplete="current-password"
               />
+
+              {/* <div>                 
+                  <div >
+                    <Grid container spacing={1} alignItems="flex-end">
+                      <Grid item>
+                        <AccountCircle />
+                      </Grid>
+                      <Grid item>
+                        <TextField 
+                          //id="input-with-icon-grid" 
+                          label="With a grid"
+                          //variant="outlined"
+                          margin="normal"
+                          required
+                          fullWidth
+                          id="Email"
+                          label="Email Address"
+                          name="Email"
+                          autoComplete="Email"
+                          autoFocus
+                       />
+                      </Grid>
+                    </Grid>
+                  </div>
+             </div> */}
+
               <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"
@@ -197,6 +237,7 @@ export class SignIn2 extends Component {
                 type="submit"
                 fullWidth
                 variant="contained"
+                //variant="contained"
                 color="primary"
               >
                 Sign In

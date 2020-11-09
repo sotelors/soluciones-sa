@@ -45,7 +45,8 @@ export class Department extends Component{
 
     refreshList(){
 
-        fetch('http://localhost:22692/api/Department')
+        //fetch('http://localhost:22692/api/Department')
+        fetch('https://webapi-2.azurewebsites.net/api/Department')
         .then(response=> response.json())
         .then(data => {
             this.setState({deps:data});
