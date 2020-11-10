@@ -264,7 +264,7 @@ export class Ingreso extends Component {
             </Typography>
 
             <Typography component="h1" variant="h5">
-              Sign in 2
+              Sign in
             </Typography>
             <form onSubmit={this.handlerSubmit} noValidate autocomplete="nope">
               <div className="row-input">

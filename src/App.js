@@ -30,7 +30,7 @@ function App() {
           Iniciar Sesion
         </Button> */}
 
-        
+
 
         {/* <h3 className="m-3 d-flex justify-content-center">
           Reac JS con Web api
@@ -44,8 +44,8 @@ function App() {
         <Switch>
           {/* <Route path="/Login" component={Login} exact /> */}
 
-          <Route path="/" component={SignIn2} exact />
-          {/* <Route path="/" component={Ingreso} exact /> */}
+          {/* <Route path="/" component={SignIn2} exact /> */}
+          <Route path="/" component={Ingreso} exact />
           {/* <Route path="/" component={Home} exact /> */}
           <Route path="/Home" component={Home} exact />
           <Route path="/department" component={Department} exact />
@@ -55,7 +55,7 @@ function App() {
           <Route path="/Ingreso" component={Ingreso} exact />
         </Switch>
 
-        
+
 
         {/* <Button>Guardar</Button> */}
       </div>
@@ -66,7 +66,7 @@ function App() {
 
 // const App = () => {
 //   //const alert = useAlert()
- 
+
 //   return (
 //     <BrowserRouter>
 //       <div className="Container m-5 pb-5">
