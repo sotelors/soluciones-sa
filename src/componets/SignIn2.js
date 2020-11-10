@@ -43,14 +43,37 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+//Inicio Const Email
+const EMAIL_REGEX = new RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
+//Fin Const Email
 
 export class SignIn2 extends Component {
   
   constructor(props) {
     super(props);
     //IconButton
-    this.state = { snackbaropen: false, snackbarmsg: "" };
+    this.state = { 
+      snackbaropen: false, snackbarmsg: "" ,
+      name: '',
+      email: '',
+      touched: {
+        name: false,
+        email: false
+      },
+      errors: {
+        required: {
+          name: false,
+          email: false
+        },
+        valid: {
+          email: false,
+          name: true
+        }
+      }
+    };
+
     this.handlerSubmit = this.handlerSubmit.bind(this);
+
     
   }
 
@@ -71,8 +94,8 @@ export class SignIn2 extends Component {
 
     //alert(event.target.DepartmentName.value);
 
-    //fetch("http://localhost:22692/api/login/Login", {
-    fetch("https://webapi-2.azurewebsites.net/Api/login/Login", {
+    fetch("http://localhost:22692/api/login/Login", {
+    //fetch("https://webapi7.azurewebsites.net/Api/login/Login", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -136,6 +159,12 @@ export class SignIn2 extends Component {
     // )
   }
 
+  //Inicio Metodos
+
+  
+
+  //Fin Metodos
+
   render() {
     //const classes = useStyles();
     return (
@@ -184,24 +213,29 @@ export class SignIn2 extends Component {
               <TextField
                 //variant="outlined"
                 margin="normal"
-                required
+                required = {true}
                 fullWidth
                 id="Email"
                 label="Email Address"
                 name="Email"
                 autoComplete="Email"
                 autoFocus
+
+
               />
               <TextField
                 //variant="outlined"
                 margin="normal"
-                required
+                required = {true}
+                isRequired="true"
                 fullWidth
                 name="Password"
                 label="Password"
                 type="password"
                 id="Password"
                 autoComplete="current-password"
+
+
               />
 
               {/* <div>                 
@@ -239,6 +273,7 @@ export class SignIn2 extends Component {
                 variant="contained"
                 //variant="contained"
                 color="primary"
+                
               >
                 Sign In
               </Button>

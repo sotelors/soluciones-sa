@@ -11,12 +11,14 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import SignIn from "./componets/SignIn";
 import PaginaInicio from "./componets/PaginaInicio";
 import { SignIn2 } from "./componets/SignIn2";
+//import { Ingreso } from "./componets/Ingreso";
 import  Formulario  from "./componets/Formulario";
 //import Login from "./componets/Login";
 //import { NavLink } from 'react-bootstrap';
 import { useAlert } from 'react-alert';
 import { withAlert } from 'react-alert'
 import Typography from "@material-ui/core/Typography";
+import  {Ingreso}  from "./componets/Ingreso";
 
 function App() {
 
@@ -41,13 +43,19 @@ function App() {
 
         <Switch>
           {/* <Route path="/Login" component={Login} exact /> */}
+
           <Route path="/" component={SignIn2} exact />
+          {/* <Route path="/" component={Ingreso} exact /> */}
           {/* <Route path="/" component={Home} exact /> */}
           <Route path="/Home" component={Home} exact />
           <Route path="/department" component={Department} exact />
           <Route path="/Employee" component={Employee} exact />
+          <Route path="/Formulario" component={Formulario} exact />
           <Route path="/SignIn2" component={SignIn2} exact />
+          <Route path="/Ingreso" component={Ingreso} exact />
         </Switch>
+
+        
 
         {/* <Button>Guardar</Button> */}
       </div>

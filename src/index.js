@@ -15,6 +15,7 @@ import IniPrueba from "./componets/IniPrueba";
 import { render } from 'react-dom';
 import { transitions, positions, Provider as AlertProvider } from 'react-alert';
 import AlertTemplate from 'react-alert-template-basic';
+import ContactForm from "./componets/ContactForm";
 
 // optional configuration
 const options = {
@@ -39,6 +40,7 @@ ReactDOM.render(
     {/* <IniPrueba /> */}
     {/* <Ingreso /> */}
     <App />
+    {/* <ContactForm></ContactForm> */}
   </React.StrictMode>,
   document.getElementById("root")
 );
