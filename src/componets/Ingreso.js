@@ -98,8 +98,8 @@ export class Ingreso extends Component {
 
     //alert(event.target.DepartmentName.value);
 
-    fetch("http://localhost:22692/api/login/Login", {
-      //fetch("https://webapi7.azurewebsites.net/Api/login/Login", {
+    //fetch("http://localhost:22692/api/login/Login", {
+      fetch("https://webapi7.azurewebsites.net/Api/login/Login", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -264,7 +264,7 @@ export class Ingreso extends Component {
             </Typography>
 
             <Typography component="h1" variant="h5">
-              Sign in
+              Sign in -
             </Typography>
             <form onSubmit={this.handlerSubmit} noValidate autocomplete="nope">
               <div className="row-input">
